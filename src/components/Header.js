@@ -1,5 +1,5 @@
 import '../styles/layout/header.scss';
-import headerImg from '../images/Rick_and_Morty_title_card_(cropped).png';
+import headerImg from '../images/RickandMortytwo.jpg';
 //import Filter from './Filter';
 const Header = () => {
   return (

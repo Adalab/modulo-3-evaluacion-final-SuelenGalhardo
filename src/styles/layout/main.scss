@@ -1,11 +1,53 @@
 .main {
-  display: flex;
-  flex-direction: row;
-  height: 500px;
+  background-color: #111413;
+
+  &__h1 {
+    color: #07b0c6;
+    text-align: left;
+    font-size: 25px;
+  }
+  &__label {
+    color: white;
+  }
+  &__notFound {
+    color: white;
+  }
 }
 .character {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
 
-  &__list {
+  &__item {
+    border: 1px solid rgb(94, 60, 158);
+    background-color: #07b0c6;
+    border-radius: 20px;
+    width: 200px;
+    height: 310px;
+  }
+}
+
+.card {
+  &__img {
+    width: 200px;
+    border-radius: 8px;
+  }
+  &__name {
+    font-family: monospace;
+    color: #111413;
+    font-size: 18px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  &__specie {
+    font-family: 'Courier New', Courier, monospace;
+    color: #131414;
+    font-size: 15px;
+    padding-left: 10px;
+    text-align: center;
   }
 }

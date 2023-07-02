@@ -5,9 +5,11 @@ import CharacterList from './CharacterList';
 import Header from './Header';
 import Footer from './Footer';
 import ls from '../services/localStorage.js';
+import Form from './Form';
 
 function App() {
   const [characterList, setCharacterList] = useState(ls.get('characters', []));
+  const [searchName, setSearchName] = useState(ls.get('characterList', ''));
 
   useEffect(() => {
     if (ls.get('characters', null) === null) {
@@ -19,12 +21,24 @@ function App() {
   }, []);
 
   //filter
+  const handleSearchName = (eve) => {
+    eve.preventDefault();
+
+    setSearchName(eve.target.value);
+    ls.set('searchName', searchName);
+  };
+
+  const filterList = characterList.filter((characterApi) =>
+    characterApi.name.toLowerCase().includes(searchName.toLowerCase())
+  );
 
   return (
     <div className='container'>
       <Header />
       <main className='main'>
-        <CharacterList characterList={characterList} />
+        <h1 className='main__title'>Rick and Morty</h1>
+        <Form handleSearchName={handleSearchName} />
+        <CharacterList characterList={filterList} />
       </main>
       <Footer />
     </div>
