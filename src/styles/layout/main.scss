@@ -1,0 +1,11 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  height: 500px;
+}
+.character {
+  display: flex;
+
+  &__list {
+  }
+}
