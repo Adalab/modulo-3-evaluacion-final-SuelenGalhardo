@@ -4,19 +4,21 @@ import getDataFromApi from '../services/api';
 import CharacterList from './CharacterList';
 import Header from './Header';
 import Footer from './Footer';
-//import ls from '../services/localStorage.js';
+import ls from '../services/localStorage.js';
 
 function App() {
-  const [characterList, setCharacterList] = useState([]);
+  const [characterList, setCharacterList] = useState(ls.get('characters', []));
 
   useEffect(() => {
-    //if (localStorage.getItem('characters') === null)
-    // {
-    getDataFromApi().then((cleanData) => {
-      setCharacterList(cleanData);
-      //ls.set('characters', cleanData);
-    });
+    if (ls.get('characters', null) === null) {
+      getDataFromApi().then((cleanData) => {
+        setCharacterList(cleanData);
+        ls.set('characters', cleanData);
+      });
+    }
   }, []);
+
+  //filter
 
   return (
     <div className='container'>
