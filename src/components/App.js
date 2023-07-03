@@ -5,11 +5,12 @@ import CharacterList from './CharacterList';
 import Header from './Header';
 import Footer from './Footer';
 import ls from '../services/localStorage.js';
-import Form from './Form';
+import Filters from './Filters';
 
 function App() {
   const [characterList, setCharacterList] = useState(ls.get('characters', []));
   const [searchName, setSearchName] = useState(ls.get('characterList', ''));
+  const [searchSpecies, setSearchSpecies] = useState('');
 
   useEffect(() => {
     if (ls.get('characters', null) === null) {
@@ -21,23 +22,32 @@ function App() {
   }, []);
 
   //filter
-  const handleSearchName = (eve) => {
-    eve.preventDefault();
-
-    setSearchName(eve.target.value);
-    ls.set('searchName', searchName);
+  const handleFilter = (varName, varValue) => {
+    if (varName === 'name') {
+      setSearchName(varValue);
+    } else if (varName === 'especies') {
+      setSearchSpecies(varValue);
+    }
   };
 
-  const filterList = characterList.filter((characterApi) =>
-    characterApi.name.toLowerCase().includes(searchName.toLowerCase())
-  );
+  const filterList = characterList
+    .filter((characterApi) => characterApi.name.toLowerCase().includes(searchName.toLowerCase()))
+
+    .filter((characterApi) =>
+      characterApi.species.toLowerCase().includes(searchSpecies.toLowerCase())
+    );
 
   return (
     <div className='container'>
       <Header />
       <main className='main'>
         <h1 className='main__title'>Rick and Morty</h1>
-        <Form handleSearchName={handleSearchName} />
+        <Filters
+          searchName={searchName}
+          searchSpecies={searchSpecies}
+          filterList={filterList}
+          handleFilter={handleFilter}
+        />
         <CharacterList characterList={filterList} />
       </main>
       <Footer />

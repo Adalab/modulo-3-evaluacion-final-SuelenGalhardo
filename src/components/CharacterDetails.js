@@ -10,7 +10,8 @@ function characterDetails({ characterData }) {
             <h3 className='detail__name'> Name: {characterData.name}</h3>
             <p className='detail__species'> Especie:{characterData.species}</p>
             <p className='detail__status'>Estado: {characterData.status}</p>
-            <p className='detail__episodes'>Episodios:{characterData.episodes}</p>
+            <p className='detail__origen'>Episodios:{characterData.origin}</p>
+            <p className='detail__episodes'>Episodios:{characterData.episode}</p>
           </div>
         </section>
       </div>
