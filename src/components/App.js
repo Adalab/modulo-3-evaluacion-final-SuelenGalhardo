@@ -1,5 +1,8 @@
 import '../styles/App.scss';
 import { useEffect, useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import CharacterDetails from './CharacterDetails';
+import { useLocation, matchPath } from 'react-router-dom';
 import getDataFromApi from '../services/api';
 import CharacterList from './CharacterList';
 import Header from './Header';
@@ -37,19 +40,43 @@ function App() {
       characterApi.species.toLowerCase().includes(searchSpecies.toLowerCase())
     );
 
+  const { pathname } = useLocation();
+
+  const routeData = matchPath('character/:characterId', pathname);
+
+  const characterId = routeData?.params.characterId;
+  //const characterId = routeData !== null ? routeData.params.characterId : '';
+
+  const characterData = characterList.find((character) => character.id === parseInt(characterId));
+  console.log(characterList);
   return (
     <div className='container'>
       <Header />
       <main className='main'>
         <h1 className='main__title'>Rick and Morty</h1>
-        <Filters
-          searchName={searchName}
-          searchSpecies={searchSpecies}
-          filterList={filterList}
-          handleFilter={handleFilter}
-        />
-        <CharacterList characterList={filterList} />
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <>
+                <Filters
+                  searchName={searchName}
+                  searchSpecies={searchSpecies}
+                  filterList={filterList}
+                  handleFilter={handleFilter}
+                />
+                <CharacterList characterList={filterList} />
+              </>
+            }
+          />
+
+          <Route
+            path='/character/:characterId'
+            element={<CharacterDetails characterData={characterData} />}
+          />
+        </Routes>
       </main>
+
       <Footer />
     </div>
   );
