@@ -7,7 +7,7 @@ function FilterSpecies({ searchSpecies, ls, setSearchSpecies, handleFilter }) {
   };
 
   return (
-    <label className='main__species' htmlFor='species'>
+    <label className='main__label' htmlFor='species'>
       Especies:
       <input
         className='main__input'
