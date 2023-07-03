@@ -20,21 +20,21 @@ const Status = (status) => {
     console.log(characterData);
     return (
       <>
-        <div>
-          <Link to='/' className='detail__cardLink'>
-            Volver
-          </Link>
-          <h3>detalle de un personaje</h3>
-          <section className='detail'>
+        <div className='detail'>
+          <section className='detail__section'>
+            <h3 className='detail__title'>Detalle de un personaje:</h3>
             <img className='detail__img' src={characterData.image} alt=''></img>
-            <div>
+            <div className='detail__container'>
               <h3 className='detail__name'> Name: {characterData.name}</h3>
               <p className='detail__species'> Especie:{characterData.species}</p>
               <p className='detail__status'>Estado: {characterData.status}</p>
               <p className='detail__origen'>Origen:{characterData.origin}</p>
               <p className='detail__episodes'>Episodios:{characterData.episode.length}</p>
             </div>
-            <Link to='/'> Volver</Link>
+            <Link to='/' className='detail__link'>
+              {' '}
+              Volver
+            </Link>
           </section>
         </div>
       </>

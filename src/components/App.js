@@ -53,7 +53,6 @@ function App() {
     <div className='container'>
       <Header />
       <main className='main'>
-        <h1 className='main__title'>Rick and Morty</h1>
         <Routes>
           <Route
             path='/'
