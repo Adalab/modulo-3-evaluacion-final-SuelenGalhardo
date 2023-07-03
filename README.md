@@ -15,7 +15,7 @@ Yanelis Serrano @ytaylordev
 Dayana Romero @dayanare
 Gracias, por todo el soporte y paciencia  para la realización del Proyecto 🎁
 
-Si, leieste hasta aqui, estas invitado a una cerveza 🍺 o un café ☕!! 👍😁
+Si, leiste hasta aqui, estas invitado a una cerveza 🍺 o un café ☕!! 👍😁
 
 ⌨️ con ❤️ por Suelen Galhardo 😊
 ✨Statement link: 
