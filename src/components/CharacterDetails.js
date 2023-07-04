@@ -1,21 +1,6 @@
 import { Link } from 'react-router-dom';
 import '../styles/layout/characterDetails.scss';
 function characterDetails({ characterData }) {
-  /*
-const Status = (status) => {
-    if (status.toLowerCase() === 'alive') {
-      return 'Sí';
-    } else if (status.toLowerCase() === 'dead') {
-      return 'No';
-    } else {
-      return 'No se sabe';
-    }
-
-    ****  va abajo <p className='cardContainer__section--status'>
-            ¿está vivo? {getStatus(characterData.status)}
-  };
-
-*/
   if (characterData) {
     console.log(characterData);
     return (
