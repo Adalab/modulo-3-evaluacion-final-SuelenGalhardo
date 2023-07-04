@@ -59,6 +59,10 @@
   grid-gap: 5px;
 
   @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  @media screen and (min-width: 1024px) {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
   }

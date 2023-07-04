@@ -1,4 +1,4 @@
-Module 3: Final evaluation exercise
+Module 3: Final evaluation of Module 3- React 
 
 
 Starting 🚀
