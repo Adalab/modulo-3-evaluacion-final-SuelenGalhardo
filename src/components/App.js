@@ -9,6 +9,7 @@ import Header from './Header';
 import Footer from './Footer';
 import ls from '../services/localStorage.js';
 import Filters from './Filters';
+import { Link } from 'react-router-dom';
 
 function App() {
   const [characterList, setCharacterList] = useState(ls.get('characters', []));
@@ -72,6 +73,17 @@ function App() {
           <Route
             path='/character/:characterId'
             element={<CharacterDetails characterData={characterData} />}
+          />
+          <Route
+            path='*'
+            element={
+              <div className='error'>
+                <p className='detail__error'>"Lo sentimos, esta página no existe"</p>
+                <Link to='/' className='detail__link'>
+                  Volver
+                </Link>
+              </div>
+            }
           />
         </Routes>
       </main>

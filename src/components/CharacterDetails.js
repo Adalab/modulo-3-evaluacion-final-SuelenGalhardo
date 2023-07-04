@@ -42,8 +42,10 @@ const Status = (status) => {
   } else {
     return (
       <div>
-        <p className='error'>Lo sentimos, es contacto no existe!</p>
-        <Link to='/'>Volver</Link>
+        <p className='detail__error'>Lo sentimos, es contacto no existe!</p>
+        <Link to='/' className='detail__link'>
+          Volver
+        </Link>
       </div>
     );
   }

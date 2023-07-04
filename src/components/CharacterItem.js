@@ -1,4 +1,6 @@
 import { Link } from 'react-router-dom';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+//import {alien-8bit,} from '@fortawesome/free-solid-svg-icons';
 
 function CharacterItem({ eachElement }) {
   return (
