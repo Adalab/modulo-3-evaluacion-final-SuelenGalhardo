@@ -27,7 +27,7 @@ function characterDetails({ characterData }) {
   } else {
     return (
       <div>
-        <p className='detail__error'>Lo sentimos, este contacto no existe!</p>
+        <p className='detail__error'>Lo sentimos, esta tarjeta no existe!</p>
         <Link to='/' className='detail__link'>
           Volver
         </Link>
