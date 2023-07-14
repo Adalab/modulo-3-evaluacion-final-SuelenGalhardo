@@ -11,9 +11,9 @@ Thanks to the Professors:
 Ivan Garrido @igarrido-adalab
 Yanelis Serrano @ytaylordev
 Dayana Romero @dayanare
-Thank you for all the support and patience for the realization of the Project 🎁
 
-Yes, you read this far, you are invited to a beer 🍺 or a coffee ☕!! 👍😁
 
-⌨️ with ❤️ by Suelen Galhardo 😊
+
+
+
 ✨Project Link: http://beta.adalab.es/modulo-3-evaluacion-final-SuelenGalhardo/
