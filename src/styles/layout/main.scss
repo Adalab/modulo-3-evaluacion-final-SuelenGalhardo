@@ -1,4 +1,5 @@
 .main {
+  font-family: 'RocknRoll One', sans-serif;
   background-color: #303332;
   width: 100%;
   min-height: 64vh;
@@ -49,6 +50,7 @@
   }
 }
 .card {
+
   &__link {
     text-decoration: none;
   }
@@ -90,7 +92,7 @@
     }
   }
   &__name {
-    font-family: monospace;
+    font-family: 'RocknRoll One', sans-serif;
     color: #111413;
     font-size: 14px;
     padding-left: 10px;
@@ -106,5 +108,6 @@
     font-size: 15px;
     padding-left: 10px;
     text-align: center;
+    margin-top: 10px;
   }
 }
