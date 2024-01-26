@@ -16,4 +16,4 @@ Dayana Romero @dayanare
 
 
 
-✨Project Link: http://beta.adalab.es/modulo-3-evaluacion-final-SuelenGalhardo/
+✨Project Link: https://suelengalhardo.github.io/Rick-and-Morty/
