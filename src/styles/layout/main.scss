@@ -4,6 +4,7 @@
   width: 100%;
   min-height: 64vh;
   &__h1 {
+    font-family: 'RocknRoll One', sans-serif;
     color: #07b0c6;
     font-size: 14px;
     @media screen and (min-width: 768px) {
@@ -11,11 +12,13 @@
     }
   }
   &__title {
+    font-family: 'RocknRoll One', sans-serif;
     color: #07b0c6;
     text-align: center;
     font-size: 25px;
   }
   &__label {
+    font-family: 'RocknRoll One', sans-serif;
     color: #07b0c6;
     font-size: 14px;
     @media screen and (min-width: 768px) {
